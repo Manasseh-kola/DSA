@@ -1,4 +1,5 @@
 import heapq
+#start-starting node, edges-adjList
 def dijkstrasAlgorithm(start, edges):
     minDistances = [float("inf") for _ in range(len(edges))]
     minDistances[start] = 0
@@ -16,4 +17,5 @@ def dijkstrasAlgorithm(start, edges):
         if newDistance < prevDistance:
           minDistances[childNode] = newDistance
           heapq.heappush(minHeap,(newDistance,childNode))
+    # min distance = -1 if node is unreachable
     return list(map(lambda x: -1 if x == float("inf") else x,minDistances))
