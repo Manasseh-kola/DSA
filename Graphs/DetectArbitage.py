@@ -31,6 +31,8 @@ true
 
 """
 
+#Bellman-ford
+
 def detectArbitrage(exchangeRates):
     arbitrage = False
     maxAmount = [0 for _ in exchangeRates]
